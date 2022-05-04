@@ -12,8 +12,8 @@ def main():
     with socket.create_connection((HOST, PORTA)) as s:
 
         while True: 
-            msg = input("Digite uma mensagem ('fim' para terminar):")
-            if msg == 'fim':
+            msg = input("Write a message ('exit' to end):")
+            if msg == 'exit':
                 break
 
             s.sendall(bytes(msg, 'utf-8')) # envia o nome do arquivo
